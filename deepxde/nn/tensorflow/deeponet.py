@@ -350,6 +350,11 @@ class DeepONetCartesianProd(NN):
             both trunk and branch nets. If `activation` is a ``dict``, then the trunk
             net uses the activation `activation["trunk"]`, and the branch net uses
             `activation["branch"]`.
+        num_outputs: Integer describing the number of outputs the model will produce. If 
+            greater than 1, multi_output_strategy cannot be None.
+        multi_output_strategy: String that determines the network architecture if there
+            are multiple outputs. If None, will use the default DeepONet configuration 
+            for a single output. 
     """
 
     def __init__(
