@@ -217,9 +217,9 @@ class SplitStrategy(DeepONetStrategy):
         return x
 
 
-class IndependentBranchStrategy(DeepONetStrategy):
+class SplitBranchStrategy(DeepONetStrategy):
     """
-    Uses independent branch nets and shares the trunk net. Different branch net
+    Uses different branch nets and shares the trunk net. Different branch net
         architectures can be used but must all have the same last layer width
         as the trunk net. For the same architectures, use the single output format.
         For different architectures use a nested lists...
@@ -238,7 +238,7 @@ class IndependentBranchStrategy(DeepONetStrategy):
         branch = []
         if any(isinstance(i, list) for i in layer_sizes_trunk):
             raise AssertionError(
-                "Trunk net cannot be nested for independent_branch strategy."
+                "Trunk net cannot be nested for split_branch strategy."
             )
 
         for i in range(self.net.num_outputs):
@@ -276,9 +276,9 @@ class IndependentBranchStrategy(DeepONetStrategy):
         return x
 
 
-class IndependentTrunkStrategy(DeepONetStrategy):
+class SplitTrunkStrategy(DeepONetStrategy):
     """
-    Uses independent trunk nets and shares the branch net. Different trunk net
+    Uses different trunk nets and shares the branch net. Different trunk net
         architectures can be used but must all have the same last layer width
         as the branch net. For the same architectures, use the single output
         format. For different architectures use a nested list...
@@ -297,7 +297,7 @@ class IndependentTrunkStrategy(DeepONetStrategy):
         trunk = []
         if any(isinstance(i, list) for i in layer_sizes_branch):
             raise AssertionError(
-                "Branch net cannot be nested for independent_trunk strategy."
+                "Branch net cannot be nested for split_trunk strategy."
             )
 
         for i in range(self.net.num_outputs):
