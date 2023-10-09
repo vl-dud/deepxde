@@ -2,9 +2,9 @@
 
 [![Build Status](https://github.com/lululxvi/deepxde/actions/workflows/build.yml/badge.svg)](https://github.com/lululxvi/deepxde/actions/workflows/build.yml)
 [![Documentation Status](https://readthedocs.org/projects/deepxde/badge/?version=latest)](https://deepxde.readthedocs.io/en/latest/?badge=latest)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5c67adbfeabd4ccc9b84d2212c50a342)](https://www.codacy.com/gh/lululxvi/deepxde/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lululxvi/deepxde&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5c67adbfeabd4ccc9b84d2212c50a342)](https://app.codacy.com/gh/lululxvi/deepxde/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![PyPI Version](https://badge.fury.io/py/DeepXDE.svg)](https://badge.fury.io/py/DeepXDE)
-[![PyPI Downloads](https://pepy.tech/badge/deepxde)](https://pepy.tech/project/deepxde)
+[![PyPI Downloads](https://static.pepy.tech/badge/deepxde)](https://www.pepy.tech/projects/deepxde)
 [![Conda Version](https://anaconda.org/conda-forge/deepxde/badges/version.svg)](https://anaconda.org/conda-forge/deepxde)
 [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/deepxde.svg)](https://anaconda.org/conda-forge/deepxde)
 [![License](https://img.shields.io/github/license/lululxvi/deepxde)](https://github.com/lululxvi/deepxde/blob/master/LICENSE)
@@ -27,7 +27,7 @@ DeepXDE is a library for scientific machine learning and physics-informed learni
     - DeepONet: learning operators [[Nat. Mach. Intell.](https://doi.org/10.1038/s42256-021-00302-5)]
     - DeepONet extensions, e.g., POD-DeepONet [[Comput. Methods Appl. Mech. Eng.](https://doi.org/10.1016/j.cma.2022.114778)]
     - MIONet: learning multiple-input operators [[SIAM J. Sci. Comput.](https://doi.org/10.1137/22M1477751)]
-    - Fourier-DeepONet [[arXiv](https://arxiv.org/abs/2305.17289)], Fourier-MIONet [[arXiv](https://arxiv.org/abs/2303.04778)]
+    - Fourier-DeepONet [[Comput. Methods Appl. Mech. Eng.](https://doi.org/10.1016/j.cma.2023.116300)], Fourier-MIONet [[arXiv](https://arxiv.org/abs/2303.04778)]
     - physics-informed DeepONet [[Sci. Adv.](https://doi.org/10.1126/sciadv.abi8605)]
     - multifidelity DeepONet [[Phys. Rev. Research](https://doi.org/10.1103/PhysRevResearch.4.023210)]
     - DeepM&Mnet: solving multiphysics and multiscale problems [[J. Comput. Phys.](https://doi.org/10.1016/j.jcp.2021.110296), [J. Comput. Phys.](https://doi.org/10.1016/j.jcp.2021.110698)]
@@ -52,8 +52,8 @@ DeepXDE supports five tensor libraries as backends: TensorFlow 1.x (`tensorflow.
 DeepXDE has implemented many algorithms as shown above and supports many features:
 
 - enables the user code to be compact, resembling closely the mathematical formulation.
-- **complex domain geometries** without tyranny mesh generation. The primitive geometries are interval, triangle, rectangle, polygon, disk, ellipse, cuboid, sphere, hypercube, and hypersphere. Other geometries can be constructed as constructive solid geometry (CSG) using three boolean operations: union, difference, and intersection. DeepXDE also supports a geometry represented by a point cloud.
-- 5 types of **boundary conditions** (BCs): Dirichlet, Neumann, Robin, periodic, and a general BC, which can be defined on an arbitrary domain or on a point set.
+- **complex domain geometries** without tyranny mesh generation. The primitive geometries are interval, triangle, rectangle, polygon, disk, ellipse, star-shaped, cuboid, sphere, hypercube, and hypersphere. Other geometries can be constructed as constructive solid geometry (CSG) using three boolean operations: union, difference, and intersection. DeepXDE also supports a geometry represented by a point cloud.
+- 5 types of **boundary conditions** (BCs): Dirichlet, Neumann, Robin, periodic, and a general BC, which can be defined on an arbitrary domain or on a point set; and approximate distance functions for **hard constraints**.
 - different **neural networks**: fully connected neural network (FNN), stacked FNN, residual neural network, (spatio-temporal) multi-scale Fourier feature networks, etc.
 - many **sampling methods**: uniform, pseudorandom, Latin hypercube sampling, Halton sequence, Hammersley sequence, and Sobol sequence. The training points can keep the same during training or be resampled (adaptively) every certain iterations.
 - 4 **function spaces**: power series, Chebyshev polynomial, Gaussian random field (1D/2D).
